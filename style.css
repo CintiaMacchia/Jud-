@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+background-color: #e5e5e5;
+line-height: 1.6;
+font-family: Arial, sans-serif; 
+color: #333333;  
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.judo  {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.judo h1{
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.judo h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.judo p {
+    margin-bottom: 15px;
+}
+
+.inventor img {
+    width: 100%;
+    max-width: 400px; /* Ajuste conforme necessário */
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* .container {
+    display: flex; /* ativa o flex container */
+    justify-content: space-between; /* distribui os itens com espaço entre eles */
+  align-items: center; /* centraliza os itens verticalmente */
+ padding: 10px; /* espaçamento interno */
+} */
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.medalhas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.judo-item {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+   /* margin: 10px;*/
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.judo-item:hover {
+    transform: translateY(-10px);
+}
+
+.judo-item img {
+    width: 150px;  
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    margin-bottom: 15px;
+}
+
+.judo-item h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.judo-item p {
+    margin: 5px 0;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .judo-item {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .judo h1 {
+        font-size: 2em;
+    }
+
+    .judo h4 {
+        font-size: 1.2em;
+    }
+
+    .invento img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .judo-item {
+        padding: 10px;
+    }
+
+    .judo-item img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .judo h1 {
+        font-size: 1.5em;
+    }
+
+    .judo h4 {
+        font-size: 1em;
+    }
+}
