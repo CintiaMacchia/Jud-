@@ -20,16 +20,16 @@ body {
 .container {
     margin: 0 auto;
     padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
     /* display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+     */
+    /*justify-content: space-between;
     align-items: flex-start; */
     
 }
 .content {
     display: flex;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     gap: 30px;
 }
 
@@ -38,7 +38,7 @@ body {
     margin-bottom: 20px;
     max-width: 60%;
     min-width: 300px;
-    flex: 1;
+    
    
 }
 
@@ -63,7 +63,7 @@ body {
 }  
 
 .inventor {
-    flex: 1;
+    
     min-width: 300px;
     text-align: center; /* Centraliza a imagem e o texto dentro dessa div */
 }
@@ -147,7 +147,7 @@ h2 {
 }
 
 .team-member:hover {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
 }
 
 .team-member img {
@@ -170,14 +170,31 @@ h5 {
 
 
 @media screen and (max-width: 600px) {
-    .container {
+    body {
+        background-image: none;
         
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
         flex-direction: column; /* Coloca as divs uma embaixo da outra */
+        flex-wrap: wrap;
+        
+        
     }
     
     .inventor {
-        order: 2; /* Garante que a imagem vá para baixo do texto */
+        order: 2; /* Garante que a imagem vá para baixo do texto */ 
     }
+    .inventor img {
+        width: 100%;
+        max-width: 300px; 
+        height: auto;
+        border-radius: 10px;
+        margin: 0px 0px;
+        
+    } 
 
     .judo {
         order: 1; /* Garante que o texto fique acima da imagem */
@@ -185,7 +202,8 @@ h5 {
     }
 
     .inventor {
-        width: 100%;
+        margin: 0;
+        width: 70%;
     }
 }
 
