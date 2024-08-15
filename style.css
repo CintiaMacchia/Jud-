@@ -168,6 +168,17 @@ h5 {
     font-weight: 800
 }
 
+.logo-container {
+    display: flex;
+    justify-content: center; /* Centraliza os logos horizontalmente */
+    gap: 20px; /* Espaço entre os logos */
+}
+
+.logo {
+    width: 200px; 
+    height: auto; 
+    margin-bottom: 25px
+}
 
 @media screen and (max-width: 600px) {
     body {
