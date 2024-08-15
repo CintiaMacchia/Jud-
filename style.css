@@ -5,59 +5,89 @@
 }
 
 body {
-background-color: #e5e5e5;
-line-height: 1.6;
-font-family: Arial, sans-serif; 
-color: #333333;  
+     background-color: #e2fcea; 
+    line-height: 1.6;
+    font-family: Arial, sans-serif; 
+    color: #000000; 
+    background-image: url('./images/fundo2.png'); 
+    background-repeat: no-repeat;
+    background-position: top right; 
+    background-attachment: fixed; 
+    background-size: 70% 80%;
 }
 
 
 .container {
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: flex-start; */
+    
+}
+.content {
+    display: flex;
     align-items: flex-start;
+    gap: 30px;
 }
 
 .judo  {
     text-align: justify;
     margin-bottom: 20px;
+    max-width: 60%;
+    min-width: 300px;
+    flex: 1;
+   
 }
 
 .judo h1{
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 10px;
+    color: #004000;
+    font-weight: 800
+    
 }
 
 .judo h4 {
     font-size: 1.5em;
     margin-bottom: 10px;
+    font-weight: 800
 }
 
 .judo p {
     margin-bottom: 15px;
-}
+    font-weight: 700
+}  
 
-.inventor img {
+.inventor {
+    flex: 1;
+    min-width: 300px;
+    text-align: center; /* Centraliza a imagem e o texto dentro dessa div */
+}
+ .inventor img {
     width: 100%;
-    max-width: 400px; /* Ajuste conforme necessário */
+    max-width: 300px; 
     height: auto;
-    border-radius: 8px;
-    display: block;
-    margin: 20px auto;
-}
+    border-radius: 10px;
+    margin: 20px 80px;
+    
+} 
 
-/* .container {
-    display: flex; /* ativa o flex container */
-    justify-content: space-between; /* distribui os itens com espaço entre eles */
-  align-items: center; /* centraliza os itens verticalmente */
- padding: 10px; /* espaçamento interno */
-} */
+.inventor p {
+ text-align: center;
+ font-weight: 700
+}
 
 h2 {
-    font-size: 2em;
+    font-size: 2em; 
     text-align: center;
     margin: 20px 0;
+    margin-bottom: 10px;
+    color: #004000;
+    font-weight: 800
 }
 
 .medalhas {
@@ -67,72 +97,110 @@ h2 {
     margin: 20px;
 }
 
-.judo-item {
+ .judo-item {
     background-color: #f4f4f4;
     border-radius: 10px;
     padding: 20px;
-   /* margin: 10px;*/
+    margin: 20px;
     text-align: center;
     width: 250px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-}
+ }
+
 .judo-item:hover {
     transform: translateY(-10px);
-}
+} 
 
 .judo-item img {
-    width: 150px;  
-    height: 150px; 
-    object-fit: cover; 
-    border-radius: 10px; 
+    width: 150px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center; 
+    border-radius: 10px;
     margin-bottom: 15px;
 }
 
+
 .judo-item h3 {
     margin: 10px 0;
-    font-size: 1.2em;
-}
+    font-size: 1em;
+    font-weight: 700
+} 
 
 .judo-item p {
     margin: 5px 0;
     color: #555;
+    
 }
 
-@media (max-width: 768px) {
-    .judo-item {
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px; 
+    padding: 20px;
+}
+.team-member {
+    text-align: center; 
+    max-width: 200px; 
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member img {
+    width: 150px;  
+    height: 150px;  
+    object-fit: cover; 
+    border-radius: 10px; 
+    border: 2px solid #ddd; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
+h5 {
+    font-size: 2em; 
+    text-align: center;
+    margin: 20px 0;
+    margin-bottom: 10px;
+    color: #004000;
+    font-weight: 800
+}
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        
+        flex-direction: column; /* Coloca as divs uma embaixo da outra */
+    }
+    
+    .inventor {
+        order: 2; /* Garante que a imagem vá para baixo do texto */
+    }
+
+    .judo {
+        order: 1; /* Garante que o texto fique acima da imagem */
         width: 100%;
-        max-width: 300px;
     }
 
-    .judo h1 {
-        font-size: 2em;
-    }
-
-    .judo h4 {
-        font-size: 1.2em;
-    }
-
-    .invento img {
-        max-width: 100%;
+    .inventor {
+        width: 100%;
     }
 }
 
-@media (max-width: 480px) {
-    .judo-item {
-        padding: 10px;
+@media (max-width: 600px) {
+    .team-member {
+        flex-direction: column; /* Empilha a imagem e o texto verticalmente */
+        align-items: center; /* Centraliza a imagem e o texto */
+        text-align: center; /* Centraliza o texto */
     }
 
-    .judo-item img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .judo h1 {
-        font-size: 1.5em;
-    }
-
-    .judo h4 {
-        font-size: 1em;
+    .team-member img {
+        width: 80px; /* Ajusta o tamanho da imagem para telas menores */
+        height: 80px; /* Ajusta o tamanho da imagem para telas menores */
+        margin-right: 0; /* Remove a margem direita para telas menores */
+        margin-bottom: 10px; /* Adiciona um espaço abaixo da imagem */
     }
 }
+
